@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT Construction Dashboard</title>
+  <link rel="stylesheet" href="lib/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="lib/leaflet.js"></script>
+  <script src="lib/chart.js"></script>
+  <script src="lib/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+</head>
+<body>
+    
+
+  <!-- Sidebar -->
+  
+  <aside class="sidebar">
+    <div class="shield-header">
+        <img src="./logo.jpeg" alt="Logo" class="logo">
+        <!-- <span class="text">Shield</span> -->
+      </div>
+    <h2>Shield</h2>
+    <button class="menu-button">Dashboard</button>
+    <button class="menu-button">Alerts</button>
+    <button class="menu-button">Sign Out</button>
+  </aside>
+
+  <!-- Main Dashboard -->
+  <main class="dashboard">
+    <!-- Cards Section -->
+    <section class="cards">
+      <div class="card"><h3>Avg Temperature</h3><p id="avg-temp">--</p></div>
+      <div class="card"><h3>Avg Humidity</h3><p id="avg-humidity">--</p></div>
+      <div class="card"><h3>Avg Gas Level</h3><p id="avg-gas">--</p></div>
+      <div class="card"><h3>Total Alerts</h3><p id="total-alerts">0</p></div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-container">
+      <h3>Site Map</h3>
+      <div id="map"></div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts">
+      <div class="chart-container">
+        <h3>Gas Sensor Monthly Trends</h3>
+        <canvas id="gasChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>Temperature and Humidity Trends</h3>
+        <canvas id="tempHumidityChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>Target vs Reality</h3>
+        <canvas id="progressChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Alerts Section -->
+    <section class="alerts">
+      <h3>Alerts</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Worker ID</th>
+            <th>Time</th>
+            <th>GPS Location</th>
+          </tr>
+        </thead>
+        <tbody id="alert-table">
+          <!-- Alert data dynamically inserted here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

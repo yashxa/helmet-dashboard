@@ -1,0 +1,96 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Sidebar */
+  .logo{
+    width: 5vw;
+    height: auto;
+  }
+  .sidebar {
+    background-color: #2E3A59;
+    color: #fff;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+  }
+  .sidebar h2 {
+    margin-bottom: 30px;
+  }
+  .menu-button {
+    font-size: medium;
+    display: block;
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    cursor: pointer;
+  }
+  .menu-button:hover {
+    background-color: #4F5D75;
+  }
+  
+  /* Main Dashboard */
+  .dashboard {
+    margin-left: 270px;
+    padding: 20px;
+    background-color: #F9FAFC;
+  }
+  
+  /* Cards */
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .card {
+    flex: 1;
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  /* Map */
+  #map {
+    height: 400px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Charts */
+  .charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .chart-container {
+    flex: 1 1 45%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Alerts Table */
+  .alerts table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .alerts th, .alerts td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  .alerts th {
+    background-color: #f4f4f4;
+  }
